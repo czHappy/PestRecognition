@@ -1,0 +1,58 @@
+dataset:
+  classes_0: 99
+  classes_1: 54
+  classes_2: 14
+  class_name_0: './conf/classname_0.txt'
+  class_name_1: './conf/classname_1.txt'
+  class_name_2: './conf/classname_2.txt'
+  train_path: '/home/sk49/new_workspace/dataset/2021SoftBei/A4-basebone_balanced'
+  val_path: '/home/sk49/new_workspace/dataset/2021SoftBei/A4-basebone_balanced/val'
+  test_path: None
+  lib_path: './library/A4'
+
+model:
+
+  path_0: './ckpts/BiT-cheng.pth'
+  path_1: './ckpts/BiT-you.pth'
+  path_2: './ckpts/BiT-luan.pth'
+  size: 480
+
+pre_model:
+  path: './ckpts/prenet_model.pth'
+  size: 224
+
+GPU:
+  CUDA_VISIBLE_DEVICES: '0'
+
+server:
+  ip: '0.0.0.0'
+  port: 5002
+  method: 'POST'
+
+mysql:
+  config:
+    host: "localhost"
+    port: 3336
+    user: "root"
+    password: "sk49"
+    db: "testdb_sk49"
+    charset: 'utf8mb4'
+
+  parameters:
+    charset: "utf8mb4"
+    collate: "utf8mb4_unicode_ci"
+
+  fileds:
+    INSECTS:
+      - ORDER_NAME
+      - ORDER_CODE
+      - FAMILIY_NAME
+      - FAMILIY_CODE
+      - GENUS_NAME
+      - GENUS_CODE
+      - INSECT_NAME
+      - INSECT_CODE
+      - LATIN_NAME
+      - FOOD
+      - AREA
+

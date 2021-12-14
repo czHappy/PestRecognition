@@ -1,0 +1,1 @@
+bin/mysql -u root -p -S /home/sk49/mysql/mysql-5.7.32-linux-glibc2.12-x86_64/mysql.sock
